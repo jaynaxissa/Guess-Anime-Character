@@ -1,7 +1,28 @@
+.guess-input{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .input-answer{
-    width: 388px;
+    width: 260px;
     height: 2em;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     padding: 4px;
     padding-left: 8px;
+}
+
+.submit-button{
+   margin-top: auto;
+   margin-bottom: auto;
+   width: 60px;
+   height: 38px;
+
+}
+
+.next-button{
+    width: 60px;
+    height: 38px;
+    margin-top: auto;
+    margin-bottom: auto;
 }

@@ -2,34 +2,39 @@ import React, { useState } from "react";
 import { animeCharacter } from "../characters";
 import "./guess.css";
 
-const Guess = ({ selectedAnswer }) => {
-  const [userGuess, setUserGuess] = useState("");
-
-  const handleAnswer = (e) => {
-    setUserGuess(e.target.value);
-  };
-
+const Guess = ({
+  selectedAnswer,
+  userAnswer,
+  handleAnswer,
+  handleButtonClick,
+  changeClue,
+}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
+    handleButtonClick();
 
-    if (userGuess === selectedAnswer.name) {
-      console.log("Right answer");
+    if (userAnswer === selectedAnswer.name) {
     } else {
       console.log("wrong answer");
     }
   };
   return (
-    <div>
+    <div className="guess-input">
       <form>
         <input
           className="input-answer"
           type="text"
           placeholder="What's the name of this character?"
           onChange={handleAnswer}
-          value={userGuess}
+          value={userAnswer}
         />
       </form>
-      <button onClick={handleSubmit}>Enter</button>
+      <button className="submit-button" onClick={handleSubmit}>
+        Enter
+      </button>
+      <button className="next-button" onClick={changeClue}>
+        Next
+      </button>
     </div>
   );
 };
