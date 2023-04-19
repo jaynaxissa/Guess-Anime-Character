@@ -20,6 +20,7 @@ const Guess = ({
   };
   return (
     <div className="guess-input">
+     
       <form>
         <input
           className="input-answer"
@@ -30,10 +31,7 @@ const Guess = ({
         />
       </form>
       <button className="submit-button" onClick={handleSubmit}>
-        Enter
-      </button>
-      <button className="next-button" onClick={changeClue}>
-        Next
+        ENTER
       </button>
     </div>
   );

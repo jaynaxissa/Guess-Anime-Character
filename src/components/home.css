@@ -4,14 +4,17 @@ body{
 
 .home-container{
 display: flex;
-background-color: #FFE5CA;
-height: 100vh;
+/* background-color: #FFE5CA; */
+/* background-image: url("/public/images/strawberry2.jpeg"); */
+/* height: 100vh; */
+
 }
 
 .game-title{
-    margin-left: 90px;
-   font-size: 50px;
-   margin-bottom: 1em;
+    margin-left: 80px;
+    font-size: 50px;
+    margin-bottom: 1em;
+    margin-top: 2em;
    
 
 }
@@ -32,22 +35,32 @@ height: 100vh;
 
 .layout-container {
     display: flex;
+    margin-top: 2em;
 }
 
 .left{
-    display: flex;
-}
-
-.middle {
     display: block;
+    background-color: #eaeef581;
+    width: 535px;
+    height: 500px;
+    margin-right: 0.5em;
+    border-radius: 3em;
 }
 
-.right{
-    display: flex;
+.right {
+    display: block;
+    margin-left: 0.5em;
+    
 }
 
-.vertical-align {
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 50px;
+
+
+.answer {
+    position: relative;
+    top: 180px;
+    left: 82px;
+    font-size: 20px;
+    height: 20px;
+
 }
+

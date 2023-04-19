@@ -37,14 +37,18 @@ const Home = () => {
         <div className="game-section">
           <div className="layout-container">
             <div className="left">
-              <div className="vertical-align">
-                {buttonClick && wrongAnswer ? "❌ try again" : ""}
+              <div className="game-title">GUESSNIME</div>
+              <div
+                className="answer"
+                style={{
+                  color: wrongAnswer ? "red" : "green",
+                }}
+              >
+                {!buttonClick ? "" : wrongAnswer ? "try again" : "correct!"}
               </div>
-            </div>
-
-            <div className="middle">
-              <div className="game-title">Guessnime</div>
-              <DisplayPicture selectedAnswer={character} />
+              <button className="next-button" onClick={changeClue}>
+                NEXT
+              </button>
               <Guess
                 selectedAnswer={character}
                 userAnswer={userAnswer}
@@ -55,9 +59,7 @@ const Home = () => {
             </div>
 
             <div className="right">
-              <div className="vertical-align">
-                {buttonClick && !wrongAnswer ? "✅ correct!" : ""}
-              </div>
+              <DisplayPicture selectedAnswer={character} />
             </div>
           </div>
         </div>
